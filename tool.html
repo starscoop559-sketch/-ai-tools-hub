@@ -6,27 +6,27 @@
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <style>
 body{font-family:system-ui;background:#0a0a0a;color:#fff;margin:0;padding:15px}
-.card{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:16px;padding:18px;text-align:center}
-img{width:80px;height:80px;border-radius:18px;background:#fff;padding:8px}
-h2{margin:10px 0}
-p{color:#aaa;line-height:1.5}
-.btn{display:block;background:#0088cc;color:#fff;padding:14px;border-radius:12px;text-decoration:none;font-weight:bold;margin:12px 0}
+.card{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:16px;padding:20px;text-align:center;max-width:400px;margin:20px auto}
+img{width:80px;height:80px;border-radius:18px;background:#fff;padding:10px;object-fit:contain}
+h2{margin:12px 0 8px}
+p{color:#aaa;line-height:1.6;font-size:14px}
+.btn{display:block;background:#0088cc;color:#fff;padding:14px;border-radius:12px;text-decoration:none;font-weight:bold;margin:14px 0}
 .btn2{background:#fff;color:#000}
 .back{color:#aaa;text-decoration:none;font-size:14px}
 </style>
 </head>
 <body>
-<a class="back" href="index.html">← Back</a>
+<a class="back" href="index.html">← Back to Tools</a>
 <div class="card" id="tool-card">Loading...</div>
 <script>
 let tools={
-"1":{name:"ChatGPT",logo:"https://chat.openai.com/favicon.ico",desc:"ChatGPT is the #1 AI tool for students and workers. Write essays, homework, emails, ideas in seconds. Free to use.",link:"https://chat.openai.com"},
-"2":{name:"CapCut AI",logo:"https://www.capcut.com/favicon.ico",desc:"Best free video editor with AI auto-captions, background remover. 500M+ users.",link:"https://www.capcut.com"},
-"3":{name:"Remini AI",logo:"https://remini.ai/favicon.ico",desc:"Turn blurry old photos into HD 4K quality with 1 click. Best for old family photos restoration.",link:"https://remini.ai"}
+"1":{name:"ChatGPT",logo:"https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",desc:"ChatGPT is the #1 AI tool for students, workers, businesses. Write essays, emails, homework, ideas in seconds. Trusted by 180M+ users worldwide. Free to start.",link:"https://chat.openai.com"},
+"2":{name:"CapCut AI",logo:"https://images.seeklogo.com/logo-png/42/2/capcut-logo-png_seeklogo-429712.png",desc:"Best free video editor with AI auto-captions, background remover, auto-cut. Used by 500M+ creators. No watermark. Perfect for TikTok, Reels, YouTube.",link:"https://www.capcut.com"},
+"3":{name:"Remini AI",logo:"https://cdn-1.webcatalog.io/catalog/remini/remini-icon.png",desc:"Turn blurry old photos into HD 4K quality with 1 click. Restore old family photos, enhance selfies. Used by 100M+ users. Try free.",link:"https://remini.ai"}
 };
 let id=new URLSearchParams(location.search).get('id')||"1";
 let t=tools[id];
-document.getElementById('tool-card').innerHTML=`<img src="${t.logo}"><h2>${t.name}</h2><p>${t.desc}</p><a class="btn" href="${t.link}" target="_blank">🚀 Try ${t.name} FREE →</a><a class="btn btn2" href="${t.link}" target="_blank">Get Premium</a>`;
+document.getElementById('tool-card').innerHTML=`<img src="${t.logo}"><h2>${t.name}</h2><p>${t.desc}</p><a class="btn" href="${t.link}" target="_blank">🚀 Try ${t.name} FREE →</a><a class="btn btn2" href="${t.link}" target="_blank">Get Premium</a><p style="font-size:11px">Free access • No VPN needed</p>`;
 Telegram.WebApp.ready();
 </script>
 </body>
