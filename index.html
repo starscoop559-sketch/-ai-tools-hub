@@ -9,22 +9,23 @@ body{font-family:system-ui;background:#0a0a0a;color:#fff;margin:0;padding:15px}
 h1{text-align:center;margin:15px 0}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .card{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:16px;padding:12px;text-align:center}
-.card img{width:50px;height:50px;border-radius:12px;background:#fff;padding:5px}
+.card img{width:60px;height:60px;border-radius:14px;background:#fff;padding:6px;object-fit:contain}
 .card h3{margin:8px 0 4px;font-size:14px}
-.card p{font-size:11px;color:#aaa;margin:0 0 8px}
-.tag{background:#0088cc;color:#fff;font-size:10px;padding:2px 6px;border-radius:6px}
-.btn{background:#fff;color:#000;padding:8px;border-radius:10px;text-decoration:none;display:block;font-weight:bold;font-size:12px;margin-top:6px}
+.card p{font-size:11px;color:#aaa;margin:0 0 8px;height:28px}
+.tag{background:#0088cc;color:#fff;font-size:10px;padding:3px 8px;border-radius:6px}
+.btn{background:#fff;color:#000;padding:8px;border-radius:10px;text-decoration:none;display:block;font-weight:bold;font-size:12px;margin-top:8px}
+.sub{ text-align:center;color:#888;font-size:13px;margin-bottom:15px}
 </style>
 </head>
 <body>
 <h1>🌍 AI Tools Hub</h1>
-<p style="text-align:center;color:#aaa;font-size:13px">Global Free Access • No VPN Needed</p>
+<p class="sub">Global Free Access • No VPN Needed</p>
 <div class="grid" id="grid"></div>
 <script>
 let tools=[
-{id:"1",name:"ChatGPT",logo:"https://chat.openai.com/favicon.ico",tag:"FREE",desc:"Best AI for writing, homework",link:"tool.html?id=1"},
-{id:"2",name:"CapCut AI",logo:"https://www.capcut.com/favicon.ico",tag:"VIDEO",desc:"Auto-captions, remover",link:"tool.html?id=2"},
-{id:"3",name:"Remini AI",logo:"https://remini.ai/favicon.ico",tag:"PHOTO",desc:"Enhance photos to HD",link:"tool.html?id=3"}
+{id:"1",name:"ChatGPT",logo:"https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",tag:"FREE",desc:"Best AI for writing, homework",link:"tool.html?id=1"},
+{id:"2",name:"CapCut AI",logo:"https://images.seeklogo.com/logo-png/42/2/capcut-logo-png_seeklogo-429712.png",tag:"VIDEO",desc:"Auto-captions, background remover",link:"tool.html?id=2"},
+{id:"3",name:"Remini AI",logo:"https://cdn-1.webcatalog.io/catalog/remini/remini-icon.png",tag:"PHOTO",desc:"Enhance old photos to HD",link:"tool.html?id=3"}
 ];
 let grid=document.getElementById('grid');
 tools.forEach(t=>{
