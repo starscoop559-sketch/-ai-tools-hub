@@ -7,7 +7,7 @@
 <style>
 body{font-family:system-ui;background:#0a0a0a;color:#fff;margin:0;padding:15px}
 .card{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:16px;padding:18px;text-align:center}
-img{width:80px;height:80px;border-radius:18px;background:#fff;padding:5px}
+img{width:80px;height:80px;border-radius:18px;background:#fff;padding:8px}
 h2{margin:10px 0}
 p{color:#aaa;line-height:1.5}
 .btn{display:block;background:#0088cc;color:#fff;padding:14px;border-radius:12px;text-decoration:none;font-weight:bold;margin:12px 0}
@@ -20,9 +20,9 @@ p{color:#aaa;line-height:1.5}
 <div class="card" id="tool-card">Loading...</div>
 <script>
 let tools={
-"1":{name:"ChatGPT",logo:"https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",desc:"The #1 AI for writing, homework, business ideas. Free to use, works globally.",link:"https://chat.openai.com"},
-"2":{name:"CapCut AI",logo:"https://sf16-sg.tiktokcdn.com/obj/eden-sg/lapz_k4/ljhwZthlaukjlkulzlp/capcut/logo.png",desc:"Best free video editor with AI auto-captions, background remover. 500M+ users.",link:"https://www.capcut.com"},
-"3":{name:"Remini AI",logo:"https://remini.ai/favicon.ico",desc:"Turn blurry photos into HD 4K with 1 click. Best for old photo restoration.",link:"https://remini.ai"}
+"1":{name:"ChatGPT",logo:"https://chat.openai.com/favicon.ico",desc:"ChatGPT is the #1 AI tool for students and workers. Write essays, homework, emails, ideas in seconds. Free to use.",link:"https://chat.openai.com"},
+"2":{name:"CapCut AI",logo:"https://www.capcut.com/favicon.ico",desc:"Best free video editor with AI auto-captions, background remover. 500M+ users.",link:"https://www.capcut.com"},
+"3":{name:"Remini AI",logo:"https://remini.ai/favicon.ico",desc:"Turn blurry old photos into HD 4K quality with 1 click. Best for old family photos restoration.",link:"https://remini.ai"}
 };
 let id=new URLSearchParams(location.search).get('id')||"1";
 let t=tools[id];
@@ -30,4 +30,4 @@ document.getElementById('tool-card').innerHTML=`<img src="${t.logo}"><h2>${t.nam
 Telegram.WebApp.ready();
 </script>
 </body>
-  </html>
+</html>
